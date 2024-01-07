@@ -1,14 +1,5 @@
 # Learn Rust with Tests
 
-<p align="center">
-  <img src="" />
-</p>
-
-
-## Formats
-
-- [EPUB or PDF]()
-
 ## Support me
 
 I am proud to offer this resource for free, but if you wish to give some appreciation:
