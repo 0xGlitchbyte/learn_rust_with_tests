@@ -1,0 +1,6 @@
+[book]
+authors = ["0xGlitchbyte"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Learn Rust with Tests"
