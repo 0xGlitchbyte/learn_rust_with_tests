@@ -1,11 +1,5 @@
 # Learn Rust with Tests
 
-## Support me
-
-I am proud to offer this resource for free, but if you wish to give some appreciation:
-
-- [Tweet me @0xglitchbyte](https://twitter.com/0xglitchbyte)
-
 ## Why
 
 * Explore the Rust language by writing tests
@@ -37,8 +31,8 @@ I am proud to offer this resource for free, but if you wish to give some appreci
 17. [Iterators](src/iterators.md) - Learn about the different ways to iterate.
 18. [Smart Pointers](src/smart_pointers.md) - Learn about how smart pointers are variables that contain an address in memory and reference some other data.
 19. [Threads](src/threads.md) - Learn about how programs can have independent parts that run simultaneously.
-20. [Macros](src/macros.md) - Learn how to use and create `macros`.
-21. [Conversions](src/conversions.md) - Learn about the many ways to convert a value of a given type into another type.
+20. [Macros](macros.md) - Learn how to use and create `macros`.
+21. [Conversions](conversions.md) - Learn about the many ways to convert a value of a given type into another type.
 
 ### Build an application
 
@@ -103,6 +97,12 @@ If you have such a question raise it as an issue on github and I'll try and find
 * A text editor
 * Some experience with programming. Understanding of concepts like `if`, variables, functions etc.
 * Comfortable using the terminal
+
+## Support me
+
+I am proud to offer this resource for free, but if you wish to give some appreciation:
+
+- [Tweet me @0xglitchbyte](https://twitter.com/0xglitchbyte)
 
 ## Feedback
 
