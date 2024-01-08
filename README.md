@@ -1,5 +1,7 @@
 # Learn Rust with Tests
 
+⚠️ **WIP**: **This project is an ongoing work in progress. Links may be broken and content may be missing. If you find something wrong, please open an issue and we'll get them fixed asap.**
+
 ## Why
 
 * Explore the Rust language by writing tests
