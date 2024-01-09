@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Learn Rust with Tests - Learn Rust with Tests</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html" class="active">Learn Rust with Tests</a></li><li class="chapter-item expanded "><a href="install_rust.html"><strong aria-hidden="true">1.</strong> Install Rust</a></li><li class="chapter-item expanded "><a href="hello_world.html"><strong aria-hidden="true">2.</strong> Hello, world</a></li><li class="chapter-item expanded "><a href="primitives.html"><strong aria-hidden="true">3.</strong> Primitives</a></li><li class="chapter-item expanded "><a href="control_flow.html"><strong aria-hidden="true">4.</strong> Control Flow</a></li><li class="chapter-item expanded "><a href="vectors.html"><strong aria-hidden="true">5.</strong> Vectors</a></li><li class="chapter-item expanded "><a href="ownership_borrow_checker.html"><strong aria-hidden="true">6.</strong> Ownership and Borrow Checker</a></li><li class="chapter-item expanded "><a href="structs.html"><strong aria-hidden="true">7.</strong> Structs</a></li><li class="chapter-item expanded "><a href="enums.html"><strong aria-hidden="true">8.</strong> Enums</a></li><li class="chapter-item expanded "><a href="strings.html"><strong aria-hidden="true">9.</strong> Strings</a></li><li class="chapter-item expanded "><a href="modules.html"><strong aria-hidden="true">10.</strong> Modules</a></li><li class="chapter-item expanded "><a href="mocking.html"><strong aria-hidden="true">11.</strong> Mocking</a></li><li class="chapter-item expanded "><a href="hashmaps.html"><strong aria-hidden="true">12.</strong> Hashmaps</a></li><li class="chapter-item expanded "><a href="options.html"><strong aria-hidden="true">13.</strong> Options</a></li><li class="chapter-item expanded "><a href="error_handling.html"><strong aria-hidden="true">14.</strong> Error Handling</a></li><li class="chapter-item expanded "><a href="generics.html"><strong aria-hidden="true">15.</strong> Generics</a></li><li class="chapter-item expanded "><a href="traits.html"><strong aria-hidden="true">16.</strong> Traits</a></li><li class="chapter-item expanded "><a href="lifetimes.html"><strong aria-hidden="true">17.</strong> Lifetimes</a></li><li class="chapter-item expanded "><a href="iterators.html"><strong aria-hidden="true">18.</strong> Iterators</a></li><li class="chapter-item expanded "><a href="smart_pointers.html"><strong aria-hidden="true">19.</strong> Smart Pointers</a></li><li class="chapter-item expanded "><a href="threads.html"><strong aria-hidden="true">20.</strong> Threads</a></li><li class="chapter-item expanded "><a href="macros.html"><strong aria-hidden="true">21.</strong> Macros</a></li><li class="chapter-item expanded "><a href="conversions.html"><strong aria-hidden="true">22.</strong> Conversions</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Learn Rust with Tests</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="learn-rust-with-tests"><a class="header" href="#learn-rust-with-tests">Learn Rust with Tests</a></h1>
+<h2 id="why"><a class="header" href="#why">Why</a></h2>
+<ul>
+<li>Explore the Rust language by writing tests</li>
+<li><strong>Get a grounding with TDD</strong>. Rust is a great language for learning TDD because it is a simple language to learn and testing is built-in</li>
+<li>Be confident that you'll be able to start writing robust, well-tested systems in Rust</li>
+<li><a href="why.html">Watch a video, or read about why unit testing and TDD is important</a></li>
+</ul>
+<h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of contents</a></h2>
+<h3 id="rust-fundamentals"><a class="header" href="#rust-fundamentals">Rust fundamentals</a></h3>
+<ol>
+<li><a href="src/install_rust.html">Install Rust</a> - Set up environment for productivity.</li>
+<li><a href="src/hello_world.html">Hello, world</a> - Declaring variables, constants, if/else statements, loops, functions, write your first Rust program and write your first test. Sub-test syntax and closures.</li>
+<li><a href="src/primitives.html">Primitives</a> - Further Explore function declaration syntax and learn new ways to improve the documentation of your code.</li>
+<li><a href="src/control_flow.html">Control Flow</a> - Declaring if/else, loops, match, to control the flow of your program.</li>
+<li><a href="src/vectors.html">Vectors</a> - Learn about one of the most used data structures.</li>
+<li><a href="src/ownership_borrow_checker.html">Ownership and Borrow Checker</a> - Learn about ownership, borrowing, and lifetimes.</li>
+<li><a href="src/structs.html">Structs</a> - Learn about the three struct types: a classic C struct, a tuple struct, and a unit struct..</li>
+<li><a href="src/enums.html">Enums</a> - Learn about how to define and use <code>enums</code>.</li>
+<li><a href="src/strings.html">Strings</a> - Learn about the two string types, a string slice (&amp;str) and an owned string (String).</li>
+<li><a href="src/modules.html">Modules</a> - Learn how to use the module system.</li>
+<li><a href="src/mocking.html">Mocking</a> - Learn how to use the <code>Mockall</code> library to mocking.</li>
+<li><a href="src/hashmaps.html">Hashmaps</a> - Learn how to define and use <code>hashmaps</code>.</li>
+<li><a href="src/options.html">Options</a> - Learn how every Option is either Some and contains a value, or None, and does not.</li>
+<li><a href="src/error_handling.html">Error Handling</a> - Learn how to properly handle errors.</li>
+<li><a href="src/generics.html">Generics</a> - Learn how <code>generics</code> generalize types and functionalities to broader cases, reducing code duplication.</li>
+<li><a href="src/traits.html">Traits</a> - Learn how <code>traits</code> define shared behaviors.</li>
+<li><a href="src/lifetimes.html">Lifetimes</a> - Learn how lifetimes tell the compiler how to check whether references live long enough to be valid in any given situation</li>
+<li><a href="src/iterators.html">Iterators</a> - Learn about the different ways to iterate.</li>
+<li><a href="src/smart_pointers.html">Smart Pointers</a> - Learn about how smart pointers are variables that contain an address in memory and reference some other data.</li>
+<li><a href="src/threads.html">Threads</a> - Learn about how programs can have independent parts that run simultaneously.</li>
+<li><a href="macros.html">Macros</a> - Learn how to use and create <code>macros</code>.</li>
+<li><a href="conversions.html">Conversions</a> - Learn about the many ways to convert a value of a given type into another type.</li>
+</ol>
+<h3 id="build-an-application"><a class="header" href="#build-an-application">Build an application</a></h3>
+<p>Now that you have hopefully digested the <em>Rust Fundamentals</em> section you have a solid grounding of a majority of Rust's language features and how to do TDD.</p>
+<p>This next section will involve building an application.</p>
+<p>Each chapter will iterate on the previous one, expanding the application's functionality as our product owner dictates.</p>
+<p>New concepts will be introduced to help facilitate writing great code but most of the new material will be learning what can be accomplished from Rust's standard library.</p>
+<p>By the end of this, you should have a strong grasp as to how to iteratively write an application in Rust, backed by tests.</p>
+<ul>
+<li><a href="http-server.html">HTTP server</a> - We will create an application which listens to HTTP requests and responds to them.</li>
+<li><a href="json.html">JSON, routing and embedding</a> - We will make our endpoints return JSON and explore how to do routing.</li>
+<li><a href="io.html">IO and sorting</a> - We will persist and read our data from disk and we'll cover sorting data.</li>
+<li><a href="command-line.html">Command line &amp; project structure</a> - Support multiple applications from one code base and read input from command line.</li>
+<li><a href="time.html">Time</a> - using the <code>time</code> package to schedule activities.</li>
+<li><a href="websockets.html">WebSockets</a> - learn how to write and test a server that uses WebSockets.</li>
+</ul>
+<h3 id="testing-fundamentals"><a class="header" href="#testing-fundamentals">Testing fundamentals</a></h3>
+<p>Covering other subjects around testing.</p>
+<ul>
+<li><a href="intro-to-acceptance-tests.html">Introduction to acceptance tests</a> - Learn how to write acceptance tests for your code, with a real-world example for gracefully shutting down a HTTP server</li>
+<li><a href="scaling-acceptance-tests.html">Scaling acceptance tests</a> - Learn techniques to manage the complexity of writing acceptance tests for non-trivial systems.</li>
+<li><a href="working-without-mocks.html">Working without mocks, stubs and spies</a> - Learn about how to use fakes and contracts to create more realistic and maintainable tests.</li>
+<li><a href="refactoring-checklist.html">Refactoring Checklist</a> - Some discussion on what refactoring is, and some basic tips on how to do it.</li>
+</ul>
+<h3 id="questions-and-answers"><a class="header" href="#questions-and-answers">Questions and answers</a></h3>
+<p>I often run in to questions on the internets like</p>
+<blockquote>
+<p>How do I test my amazing function that does x, y and z</p>
+</blockquote>
+<p>If you have such a question raise it as an issue on github and I'll try and find time to write a short chapter to tackle the issue. I feel like content like this is valuable as it is tackling people's <em>real</em> questions around testing.</p>
+<ul>
+<li><a href="os-exec.html">OS exec</a> - An example of how we can reach out to the OS to execute commands to fetch data and keep our business logic testable/</li>
+<li><a href="error-types.html">Error types</a> - Example of creating your own error types to improve your tests and make your code easier to work with.</li>
+<li><a href="http-handlers-revisited.html">Revisiting HTTP Handlers</a> - Testing HTTP handlers seems to be the bane of many a developer's existence. This chapter explores the issues around designing handlers correctly.</li>
+</ul>
+<h3 id="meta--discussion"><a class="header" href="#meta--discussion">Meta / Discussion</a></h3>
+<ul>
+<li><a href="why.html">Why unit tests and how to make them work for you</a> - Watch a video, or read about why unit testing and TDD is important</li>
+<li><a href="anti-patterns.html">Anti-patterns</a> - A short chapter on TDD and unit testing anti-patterns</li>
+</ul>
+<h2 id="contributing"><a class="header" href="#contributing">Contributing</a></h2>
+<ul>
+<li><em>This project is work in progress</em> If you would like to contribute, please do get in touch.</li>
+<li>Read <a href="https://github.com/quii/learn-Rust-with-tests/tree/842f4f24d1f1c20ba3bb23cbc376c7ca6f7ca79a/contributing.md">contributing.md</a> for guidelines</li>
+<li>Any ideas? Create an issue</li>
+</ul>
+<h2 id="who-this-is-for"><a class="header" href="#who-this-is-for">Who this is for</a></h2>
+<ul>
+<li>People who are interested in picking up Rust.</li>
+<li>People who already know some Rust, but want to explore testing with TDD.</li>
+</ul>
+<h2 id="what-youll-need"><a class="header" href="#what-youll-need">What you'll need</a></h2>
+<ul>
+<li>A computer!</li>
+<li><a href="https://rust-lang.org/">Installed Rust</a></li>
+<li>A text editor</li>
+<li>Some experience with programming. Understanding of concepts like <code>if</code>, variables, functions etc.</li>
+<li>Comfortable using the terminal</li>
+</ul>
+<h2 id="support-me"><a class="header" href="#support-me">Support me</a></h2>
+<p>I am proud to offer this resource for free, but if you wish to give some appreciation:</p>
+<ul>
+<li><a href="https://twitter.com/0xglitchbyte">Tweet me @0xglitchbyte</a></li>
+</ul>
+<h2 id="feedback"><a class="header" href="#feedback">Feedback</a></h2>
+<ul>
+<li>Add issues/submit PRs <a href="https://github.com/0xGlitchbyte/learn_Rust_with_tests">here</a> or <a href="https://twitter.com/0xglitchbyte">tweet me @0xglitchbyte</a></li>
+</ul>
+<p><a href="LICENSE.html">MIT license</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next" href="install_rust.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next" href="install_rust.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
