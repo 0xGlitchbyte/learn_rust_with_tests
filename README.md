@@ -14,27 +14,27 @@
 ### Rust fundamentals
 
 1. [Install Rust](src/install_rust.md) - Set up environment for productivity.
-2. [Hello, world](src/hello_world.md) - Declaring variables, constants, if/else statements, loops, functions, write your first Rust program and write your first test. Sub-test syntax and closures.
-3. [Primitives](src/primitives.md) - Further Explore function declaration syntax and learn new ways to improve the documentation of your code.
-4. [Control Flow](src/control_flow.md) - Declaring if/else, loops, match, to control the flow of your program.
-4. [Vectors](src/vectors.md) - Learn about one of the most used data structures.
-5. [Ownership and Borrow Checker](src/ownership_borrow_checker.md) - Learn about ownership, borrowing, and lifetimes.
-6. [Structs](src/structs.md) - Learn about the three struct types: a classic C struct, a tuple struct, and a unit struct..
-7. [Enums](src/enums.md) - Learn about how to define and use `enums`.
-8. [Strings](src/strings.md) - Learn about the two string types, a string slice (&str) and an owned string (String).
-9. [Modules](src/modules.md) - Learn how to use the module system.
-10. [Mocking](src/mocking.md) - Learn how to use the `Mockall` library to mocking.
-11. [Hashmaps](src/hashmaps.md) - Learn how to define and use `hashmaps`.
-12. [Options](src/options.md) - Learn how every Option is either Some and contains a value, or None, and does not.
-13. [Error Handling](src/error_handling.md) - Learn how to properly handle errors.
-14. [Generics](src/generics.md) - Learn how `generics` generalize types and functionalities to broader cases, reducing code duplication.
-15. [Traits](src/traits.md) - Learn how `traits` define shared behaviors.
-16. [Lifetimes](src/lifetimes.md) - Learn how lifetimes tell the compiler how to check whether references live long enough to be valid in any given situation
-17. [Iterators](src/iterators.md) - Learn about the different ways to iterate.
-18. [Smart Pointers](src/smart_pointers.md) - Learn about how smart pointers are variables that contain an address in memory and reference some other data.
-19. [Threads](src/threads.md) - Learn about how programs can have independent parts that run simultaneously.
-20. [Macros](macros.md) - Learn how to use and create `macros`.
-21. [Conversions](conversions.md) - Learn about the many ways to convert a value of a given type into another type.
+2. [Hello, world]() - Declaring variables, constants, if/else statements, loops, functions, write your first Rust program and write your first test. Sub-test syntax and closures.
+3. [Primitives]() - Further Explore function declaration syntax and learn new ways to improve the documentation of your code.
+4. [Control Flow]() - Declaring if/else, loops, match, to control the flow of your program.
+4. [Vectors]() - Learn about one of the most used data structures.
+5. [Ownership and Borrow Checker]() - Learn about ownership, borrowing, and lifetimes.
+6. [Structs]() - Learn about the three struct types: a classic C struct, a tuple struct, and a unit struct..
+7. [Enums]() - Learn about how to define and use `enums`.
+8. [Strings]() - Learn about the two string types, a string slice (&str) and an owned string (String).
+9. [Modules]() - Learn how to use the module system.
+10. [Mocking]() - Learn how to use the `Mockall` library to mocking.
+11. [Hashmaps]() - Learn how to define and use `hashmaps`.
+12. [Options]() - Learn how every Option is either Some and contains a value, or None, and does not.
+13. [Error Handling]() - Learn how to properly handle errors.
+14. [Generics]() - Learn how `generics` generalize types and functionalities to broader cases, reducing code duplication.
+15. [Traits]() - Learn how `traits` define shared behaviors.
+16. [Lifetimes]() - Learn how lifetimes tell the compiler how to check whether references live long enough to be valid in any given situation
+17. [Iterators]() - Learn about the different ways to iterate.
+18. [Smart Pointers]() - Learn about how smart pointers are variables that contain an address in memory and reference some other data.
+19. [Threads]() - Learn about how programs can have independent parts that run simultaneously.
+20. [Macros]() - Learn how to use and create `macros`.
+21. [Conversions]() - Learn about the many ways to convert a value of a given type into another type.
 
 ### Build an application
 
