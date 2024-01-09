@@ -48,21 +48,21 @@ New concepts will be introduced to help facilitate writing great code but most o
 
 By the end of this, you should have a strong grasp as to how to iteratively write an application in Rust, backed by tests.
 
-* [HTTP server](http-server.md) - We will create an application which listens to HTTP requests and responds to them.
-* [JSON, routing and embedding](json.md) - We will make our endpoints return JSON and explore how to do routing.
-* [IO and sorting](io.md) - We will persist and read our data from disk and we'll cover sorting data.
-* [Command line & project structure](command-line.md) - Support multiple applications from one code base and read input from command line.
-* [Time](time.md) - using the `time` package to schedule activities.
-* [WebSockets](websockets.md) - learn how to write and test a server that uses WebSockets.
+* [HTTP server]() - We will create an application which listens to HTTP requests and responds to them.
+* [JSON, routing and embedding]() - We will make our endpoints return JSON and explore how to do routing.
+* [IO and sorting]() - We will persist and read our data from disk and we'll cover sorting data.
+* [Command line & project structure]() - Support multiple applications from one code base and read input from command line.
+* [Time]() - using the `time` package to schedule activities.
+* [WebSockets]() - learn how to write and test a server that uses WebSockets.
 
 ### Testing fundamentals
 
 Covering other subjects around testing.
 
-* [Introduction to acceptance tests](intro-to-acceptance-tests.md) - Learn how to write acceptance tests for your code, with a real-world example for gracefully shutting down a HTTP server
-* [Scaling acceptance tests](scaling-acceptance-tests.md) - Learn techniques to manage the complexity of writing acceptance tests for non-trivial systems.
-* [Working without mocks, stubs and spies](working-without-mocks.md) - Learn about how to use fakes and contracts to create more realistic and maintainable tests.
-* [Refactoring Checklist](refactoring-checklist.md) - Some discussion on what refactoring is, and some basic tips on how to do it.
+* [Introduction to acceptance tests]() - Learn how to write acceptance tests for your code, with a real-world example for gracefully shutting down a HTTP server
+* [Scaling acceptance tests]() - Learn techniques to manage the complexity of writing acceptance tests for non-trivial systems.
+* [Working without mocks, stubs and spies]() - Learn about how to use fakes and contracts to create more realistic and maintainable tests.
+* [Refactoring Checklist]() - Some discussion on what refactoring is, and some basic tips on how to do it.
 
 ### Questions and answers
 
@@ -72,19 +72,19 @@ I often run in to questions on the internets like
 
 If you have such a question raise it as an issue on github and I'll try and find time to write a short chapter to tackle the issue. I feel like content like this is valuable as it is tackling people's _real_ questions around testing.
 
-* [OS exec](os-exec.md) - An example of how we can reach out to the OS to execute commands to fetch data and keep our business logic testable/
-* [Error types](error-types.md) - Example of creating your own error types to improve your tests and make your code easier to work with.
-* [Revisiting HTTP Handlers](http-handlers-revisited.md) - Testing HTTP handlers seems to be the bane of many a developer's existence. This chapter explores the issues around designing handlers correctly.
+* [OS exec]() - An example of how we can reach out to the OS to execute commands to fetch data and keep our business logic testable/
+* [Error types]() - Example of creating your own error types to improve your tests and make your code easier to work with.
+* [Revisiting HTTP Handlers]() - Testing HTTP handlers seems to be the bane of many a developer's existence. This chapter explores the issues around designing handlers correctly.
 
 ### Meta / Discussion
 
-* [Why unit tests and how to make them work for you](why.md) - Watch a video, or read about why unit testing and TDD is important
-* [Anti-patterns](anti-patterns.md) - A short chapter on TDD and unit testing anti-patterns
+* [Why unit tests and how to make them work for you]() - Watch a video, or read about why unit testing and TDD is important
+* [Anti-patterns]() - A short chapter on TDD and unit testing anti-patterns
 
 ## Contributing
 
 * _This project is work in progress_ If you would like to contribute, please do get in touch.
-* Read [contributing.md](https://github.com/quii/learn-Rust-with-tests/tree/842f4f24d1f1c20ba3bb23cbc376c7ca6f7ca79a/contributing.md) for guidelines
+* Read [contributing.md](Contributing.md) for guidelines
 * Any ideas? Create an issue
 
 ## Who this is for
