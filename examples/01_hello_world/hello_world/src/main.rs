@@ -1,23 +1,28 @@
 fn main() {
-    // ANCHOR: print;
+    // ANCHOR: print
     println!("Hello, world!");
-    // ANCHOR: print;
+    // ANCHOR_END: print
 
     let name = String::from("Rusty");
     greeting(name);
 }
 
+// ANCHOR: hello_world
 fn hello_world() -> String {
     let greeting = String::from("Hello, World!");
     greeting
 }
+// ANCHOR_END: hello_world
 
+// ANCHOR: greeting
 fn greeting(name: String) -> String {
     let hello = String::from("Hello, ");
     let greeting = format!("{hello}{name}!");
     greeting
 }
+// ANCHOR_END: greeting
 
+// ANCHOR: test
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -28,7 +33,9 @@ mod tests {
         let result = hello_world();
         assert_eq!(result, want);
     }
+    // ANCHOR_END: test
 
+    // ANCHOR: greeting_test
     #[test]
     fn greeting_test() {
         let want = String::from("Hello, Rusty!");
@@ -36,4 +43,5 @@ mod tests {
         let result = greeting(name);
         assert_eq!(want, result);
     }
+    // ANCHOR_END: greeting_test
 }

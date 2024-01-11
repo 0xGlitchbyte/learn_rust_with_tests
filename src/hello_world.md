@@ -19,34 +19,34 @@ example
 
 ## Hello, World!
 
-main.rs
 ```rust
-{{ #rustdoc_include ../../examples/01_hello_world/hello_world/src/main:print }}
-
+{{#rustdoc_include ../examples/01_hello_world/hello_world/src/main.rs:print}}
 ```
+
 We need to turn our hello world into a function
+
 ```rust
-fn hello_world() -> String {
-  let greeting = String::from("Hello, World!");
-  greeting
-}
+{{#rustdoc_include ../examples/01_hello_world/hello_world/src/main.rs:hello_world}}
 ```
 
 Enter our test
-```rust
-  #[cfg(test)]
-mod tests {
-    use super::*;
 
-    #[test]
-    fn hello_world() {
-        let want = String::from("Hello, World!");
-        let result = hello_world();
-        assert_eq!(result, want);
-    }
-}
+```rust
+{{#rustdoc_include ../examples/01_hello_world/hello_world/src/main.rs:test}}
 ```
+
 Now lets say we want to format our string to accept a name
 ```rust
-{{#include }}
+{{#rustdoc_include ../examples/01_hello_world/hello_world/src/main.rs:greeting}}
+```
+
+And then we have our test for greeting
+
+```rust
+{{#rustdoc_include ../examples/01_hello_world/hello_world/src/main.rs:greeting_test}}
+```
+
+We can define constants as such
+
+```rust
 ```
