@@ -14,7 +14,7 @@
 ### Rust fundamentals
 
 1. [Install Rust](src/install_rust.md) - Set up environment for productivity.
-2. [Hello, world]() - Declaring variables, constants, if/else statements, loops, functions, write your first Rust program and write your first test. Sub-test syntax and closures.
+2. [Hello, world](src/hello_world.md) - Declaring variables, constants, if/else statements, loops, functions, write your first Rust program and write your first test. Sub-test syntax and closures.
 3. [Primitives]() - Further Explore function declaration syntax and learn new ways to improve the documentation of your code.
 4. [Control Flow]() - Declaring if/else, loops, match, to control the flow of your program.
 4. [Vectors]() - Learn about one of the most used data structures.
