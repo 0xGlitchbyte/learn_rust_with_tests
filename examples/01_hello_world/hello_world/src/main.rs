@@ -3,6 +3,9 @@ fn main() {
     println!("Hello, world!");
     // ANCHOR_END: print
 
+    let hello = hello_world();
+    println!("{}", hello);
+
     let name = String::from("Rusty");
     greeting(name);
 }
@@ -31,7 +34,7 @@ mod tests {
     fn hello_world_test() {
         let want = String::from("Hello, World!");
         let result = hello_world();
-        assert_eq!(result, want);
+        assert_eq!(want, result);
     }
     // ANCHOR_END: test
 
