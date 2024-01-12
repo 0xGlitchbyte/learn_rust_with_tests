@@ -3,7 +3,7 @@
 [Learn Rust with Tests](LRWT.md)
 
 - [Install Rust](install_rust.md)
-- [Hello, world]() - Declaring variables, constants, if/else statements, loops, functions, write your first Rust program and write your first test. Sub-test syntax and closures.
+- [Hello, world](hello_world.md) - Declaring variables, constants, if/else statements, loops, functions, write your first Rust program and write your first test. Sub-test syntax and closures.
 - [Primitives]() - Further Explore function declaration syntax and learn new ways to improve the documentation of your code.
 - [Control Flow]() - Declaring if/else, loops, match, to control the flow of your program.
 - [Vectors]() - Learn about one of the most used data structures.
